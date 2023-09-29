@@ -1,0 +1,19 @@
+{
+  "name": "product-preview",
+  "description": "Development environment for 'Product Preview'.",
+  "version": "0.0.0",
+  "license": "MIT",
+  "type": "module",
+  "private": true,
+
+  "scripts": {
+    "start": "vite --config vite.config.dev.js",
+    "build": "vite build --config vite.config.build.js",
+    "preview": "vite preview --config vite.config.preview.js"
+  },
+
+  "devDependencies": {
+    "sass": "^1.0.0",
+    "vite": "^4.0.0"
+  }
+}
