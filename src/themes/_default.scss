@@ -1,0 +1,9 @@
+/* theme : default - ======================================================================== - */
+[data-theme='default'] {
+  & { background-color: hsl(var(--color-secondary)); }
+
+  ::selection {
+    background-color: hsl(var(--color-primary));
+    color: rgb(var(--neutral-1));
+  }
+}
