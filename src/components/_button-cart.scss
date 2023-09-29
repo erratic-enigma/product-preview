@@ -1,0 +1,30 @@
+/* component : 'add to cart' button - ======================================================= - */
+@use '@/scss/functions/converts' as convert;
+.button-cart {
+
+/* consistent --------------------------------------------------------------------------------- */
+  & {
+    transition: background-color 200ms;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: convert.rem(8px);
+    border: none;
+    border-radius:convert.rem(8px);
+    padding: convert.rem(16px);
+    background-color: hsl(var(--color-primary));
+    color: rgb(var(--neutral-1));
+  }
+
+  &.-product { align-self: stretch; }
+
+  &:focus,
+  &:hover,
+  &:active {
+    outline: none;
+    background-color: hsl(var(--color-primary-dark));
+  }
+
+  & > .text { font: 700 convert.rem(14px)/1.8 'Montserrat', var(--fallback-sans-serif); }
+}

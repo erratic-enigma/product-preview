@@ -1,0 +1,30 @@
+/* component : attribution bar - ============================================================ - */
+@use '@/scss/functions/converts' as convert;
+.attribution-bar {
+  & {
+    font-family: var(--fallback-mono);
+    font-size: convert.rem(12px);
+    text-align: center;
+    color: rgb(var(--neutral-4));
+  }
+
+  > .link:link,
+  > .link:visited {
+    transition: text-decoration-color 200ms, color 200ms;
+
+    text-decoration: underline solid transparent;
+    color: hsl(var(--color-attributes));
+  }
+
+  > .link:focus,
+  > .link:hover,
+  > .link:active {
+    color: hsl(var(--color-attributes-light));
+  }
+
+  > .link:focus-visible {
+    outline: none;
+    text-decoration-color: hsl(var(--color-attributes-light));
+  }
+
+}

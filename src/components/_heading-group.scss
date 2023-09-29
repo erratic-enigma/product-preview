@@ -1,0 +1,29 @@
+/* component : heading group - ============================================================== - */
+@use '@/scss/functions/converts' as convert;
+.heading-group {
+
+/* consistent --------------------------------------------------------------------------------- */
+  &.-tag {
+    display: flex;
+    flex-direction: column;
+    row-gap: convert.rem(8px);
+  }
+
+  &.-tag > .heading {
+    font: 700 convert.rem(32px)/1.2 'Fraunces', var(--fallback-serif);
+    color: rgb(var(--neutral-4));
+  }
+
+  &.-tag > .subtitle {
+    order: -1;
+    font: 500 convert.rem(12px)/1.8 'Montserrat', var(--fallback-sans-serif);
+    text-transform: uppercase;
+    letter-spacing: convert.rem(6px);
+    color: rgb(var(--neutral-2));
+  }
+
+/* dynamic ------------------------------------------------------------------------------------ */
+@supports (font-variant: normal) {
+  &.-tag > .heading { font-family: 'Fraunces (Variable)', var(--fallback-serif); }
+}
+}

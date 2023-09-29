@@ -1,0 +1,64 @@
+/* component : product preview - ============================================================ - */
+@use '@/scss/functions/converts' as convert;
+.product-preview {
+
+/* consistent --------------------------------------------------------------------------------- */
+  & {
+    --padding: #{convert.rem(24px)};
+
+    overflow: hidden;
+    row-gap: convert.rem(16px);
+    border-radius: convert.rem(16px);
+    background-color: rgb(var(--neutral-1));
+  }
+
+  > .product { grid-area: product; }
+
+  > .description {
+    font: 500 convert.rem(14px)/1.8 'Montserrat', var(--fallback-sans-serif);
+    color: rgb(var(--neutral-2));
+  }
+
+  > .product > img { text-align: center; }
+
+  > .product > img::before { margin: convert.rem(16px) 0; }
+
+/* dynamic ------------------------------------------------------------------------------------ */
+@media only screen and (min-width: 0) {
+  & {
+    display: grid;
+    grid-template-areas: 'product' 'heading' 'description' 'price' 'button';
+    grid-template-rows: repeat(4, 0fr) minmax(auto, convert.rem(48px));
+    padding: 0 var(--padding) var(--padding);
+    max-width: convert.rem(348px);
+  }
+
+  > .product { margin: 0 calc(-1 * var(--padding)) convert.rem(8px); }
+
+  > .product > img::selection { background-color: transparent; }
+}
+
+@media only screen and (min-width:convert.em(632px)) {
+  & {     
+    grid-template-areas:
+      'product information'
+      'product information'
+      'product information'
+      'product information'
+    ;
+    grid-template-columns: minmax(auto, convert.rem(300px)) 1fr;
+    grid-template-rows: repeat(3, 0fr) minmax(auto, convert.rem(48px));
+    align-items: center;
+    column-gap: var(--padding);
+    padding: var(--padding) var(--padding) var(--padding) 0;
+    max-width: convert.rem(600px);
+  }
+
+  > .product {
+    justify-self: end;
+    margin: calc(-1 * var(--padding)) 0 calc(-1 * var(--padding)) calc(-1 * var(--padding));
+  }
+
+  > :not(.product) { grid-column: information; }
+}
+}

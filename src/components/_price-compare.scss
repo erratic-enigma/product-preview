@@ -1,0 +1,28 @@
+/* component : product preview - ============================================================ - */
+@use '@/scss/functions/converts' as convert;
+.price-compare {
+
+/* consistent --------------------------------------------------------------------------------- */
+  & {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: convert.rem(16px);
+    align-items: center;
+  }
+
+  &.-product > .current {
+    font: 700 convert.rem(32px)/1.2 'Fraunces', var(--fallback-serif);
+    color: hsl(var(--color-primary));
+  }
+
+  &.-product > .original {
+    font: 500 convert.rem(14px)/1.8 'Montserrat', var(--fallback-sans-serif);
+    color: rgb(var(--neutral-2));
+  }
+
+/* dynamic ------------------------------------------------------------------------------------ */
+@supports (font-variant: normal) {
+  &.-product > .current { font-family: 'Fraunces (Variable)', var(--fallback-serif); }
+}
+
+}
