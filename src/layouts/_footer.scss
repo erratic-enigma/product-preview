@@ -1,0 +1,9 @@
+/* layout : footer - ======================================================================== - */
+@use '@/scss/functions/converts' as convert;
+
+.l-footer {
+  & {
+    grid-area: footer;
+    padding: 0 #{convert.rem(8px)}
+  }
+}

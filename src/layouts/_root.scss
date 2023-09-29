@@ -1,0 +1,12 @@
+/* layout : root - ========================================================================== - */
+@use '@/scss/functions/converts' as convert;
+.l-root {
+  & {
+    display: grid;
+    grid-template-areas: 'main' 'footer';
+    grid-template-rows: 1fr minmax(#{convert.rem(48px)}, auto);
+    place-items: center;
+    width: 100%;
+    min-height: 100dvh;
+  }
+}
