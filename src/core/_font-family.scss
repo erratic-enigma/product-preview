@@ -1,0 +1,79 @@
+/* core : font family - ===================================================================== - */
+@use 'sass:map';
+@use '@/scss/mixins/font-face' as font-face;
+
+// interal variables -------------------------------------------------------------------------- //
+$_family: (
+  'fraunces': 'Fraunces',
+  'montserrat': 'Montserrat'
+);
+$_url: (
+  'fraunces': '/fraunces/',
+  'montserrat': '/montserrat/'
+);
+
+/* declarations ------------------------------------------------------------------------------- */
+/* fraunces : variable */
+@font-face {
+  @include font-face.define(
+    '#{map.get($_url,'fraunces')}variable.woff2',
+    '#{map.get($_family, 'fraunces')} (Variable)',
+    700, normal
+  )
+};
+@font-face {
+  @include font-face.define(
+    '#{map.get($_url,'fraunces')}variable_italic.woff2',
+    '#{map.get($_family, 'fraunces')} (Variable)',
+    700, italic
+  )
+};
+
+/* static ------------------------------------------------------------------------------------- */
+/* fraunces : 700, semibold */
+@font-face {
+  @include font-face.define(
+    '#{map.get($_url,'fraunces')}700.woff2',
+    map.get($_family, 'fraunces'),
+    700, normal
+  )
+};
+@font-face {
+  @include font-face.define(
+    '#{map.get($_url,'fraunces')}700_italic.woff2',
+    map.get($_family, 'fraunces'),
+    700, italic
+  )
+};
+
+/* montserrat : 500, medium */
+@font-face {
+  @include font-face.define(
+    '#{map.get($_url,'montserrat')}500.woff2',
+    map.get($_family, 'montserrat'),
+    500, normal
+  )
+};
+@font-face {
+  @include font-face.define(
+    '#{map.get($_url,'montserrat')}500_italic.woff2',
+    map.get($_family, 'montserrat'),
+    500, italic
+  )
+};
+
+/* montserrat : 700, semibold */
+@font-face {
+  @include font-face.define(
+    '#{map.get($_url,'montserrat')}700.woff2',
+    map.get($_family, 'montserrat'),
+    700, normal
+  )
+};
+@font-face {
+  @include font-face.define(
+    '#{map.get($_url,'montserrat')}700_italic.woff2',
+    map.get($_family, 'montserrat'),
+    700, italic
+  )
+};

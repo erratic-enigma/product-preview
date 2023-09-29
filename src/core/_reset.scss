@@ -1,0 +1,21 @@
+/* core : reset - =========================================================================== - */
+@use '@/scss/functions/converts' as convert;
+
+*, *::before, *::after { box-sizing: border-box; }
+
+* { margin: 0; }
+
+button { cursor: pointer; }
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+img::before {
+  display: block;
+  font-family: var(--fallback-mono);
+  font-size: convert.rem(12px);
+}
+
+p, h2 { overflow-wrap: break-word; }

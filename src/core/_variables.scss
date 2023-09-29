@@ -1,0 +1,21 @@
+/* core : root variables - ================================================================== - */
+@use '@/scss/mixins/font-stack' as font-stack;
+:root {
+  /* fallback font stacks */
+  @include font-stack.mono;
+  @include font-stack.serif;
+  @include font-stack.sans-serif;
+
+  /* colours (hsl) */
+  --color-primary: 158 36% 37%;           // Dark cyan
+  --color-primary-dark: 158 36% 18.5%;    // MSU Green
+  --color-secondary: 30 38% 92%;          // Cream
+  --color-attributes: 228 45% 44%;        // Chinese Blue
+  --color-attributes-light: 228 45% 72%;  // Ceil
+
+  /* neutrals (rgb) */
+  --neutral-1: 255 255 255;
+  --neutral-2: 108 114 137;
+  --neutral-3: 28 35 43;
+  --neutral-4: 0 0 0;
+}
