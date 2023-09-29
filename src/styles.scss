@@ -1,0 +1,17 @@
+// styles - ================================================================================= - //
+@use '@/core/font-family';
+@use '@/core/variables';
+@use '@/core/reset';
+
+@use '@/themes/default';
+
+@use '@/layouts/root';
+@use '@/layouts/main';
+@use '@/layouts/footer';
+
+@use '@/components/attribution-bar';
+@use '@/components/button-cart';
+@use '@/components/heading-group';
+@use '@/components/price-compare';
+@use '@/components/product-preview';
+@use '@/components/vector-icon';
