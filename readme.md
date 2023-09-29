@@ -19,7 +19,7 @@ This is my solution to the [Product preview card component challenge](https://ww
 
 ### Links
 
-- Solution URL: ![]()
+- Solution URL: [https://www.frontendmentor.io/solutions/product-preview-card-component](https://www.frontendmentor.io/solutions/product-preview-card-component-3gQNaKBcvV)
 - Live Site URL: [https://erratic-enigma.github.io/product-preview](https://erratic-enigma.github.io/product-preview)
 
 ## My process
