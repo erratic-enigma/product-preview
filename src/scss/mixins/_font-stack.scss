@@ -1,0 +1,12 @@
+// mixin : fallback font stacks - =========================================================== - //
+@mixin mono {
+  --fallback-mono: Menlo, Consolas, Monaco, 'Liberation Mono', 'Lucida Console', monospace; 
+}
+
+@mixin serif {
+  --fallback-serif: 'Iowan Old Style', 'Apple Garamond', Baskerville, 'Times New Roman', 'Droid Serif', Times, 'Source Serif Pro', serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+}
+
+@mixin sans-serif {
+  --fallback-sans-serif: -apple-system, BlinkMacSystemFont, 'avenir next', avenir, 'segoe ui', 'helvetica neue', helvetica, Cantarell, Ubuntu, roboto, noto, arial, sans-serif;
+}

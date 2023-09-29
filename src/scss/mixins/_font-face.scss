@@ -1,0 +1,8 @@
+// mixin : font face - ====================================================================== - //
+@mixin define($source, $family, $weight, $style: normal) {
+  src: url(#{$source}) format('woff2');
+  font-family: $family;
+  font-display: swap;
+  font-weight: $weight;
+  font-style: $style;
+}

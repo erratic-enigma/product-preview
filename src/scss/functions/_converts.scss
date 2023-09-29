@@ -1,0 +1,12 @@
+// function : converts - ==================================================================== - //
+@use 'sass:math';
+
+@function rem($size) {
+  $conversion: math.div($size, 16px);
+  @return #{$conversion}rem;
+}
+
+@function em($size) {
+  $conversion: math.div($size, 16px);
+  @return #{$conversion}em;
+}
